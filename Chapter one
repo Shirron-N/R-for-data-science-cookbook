@@ -1,1 +1,41 @@
+Understanding Environment
+1. 查看当前环境
+environment()
+2.浏览全局环境
+.GlobalEnv 
+globalenv()
+3. Comparing the environment by using "identical"
+>identical(globalenv(), environment())
+[1] TRUE
+
+4.Creat a new environment
+>myenv=new.env()
+>myenv
+
+5. Finding new environmental factors
+
+>myenv$X=3
+>ls(myenv)
+
+>ls()
+
+>x
+
+6. Creat function
+>addnum<- function(x,y){
+ + x+y
+ +}
+>environment(addnum)
+
+7.判断函数是否属于程序包
+environment(lm)
+
+8. Print environment
+>addnum2=function(x,y){
+ +print(environment())
+ + x+y
+ + }
+ >addnum2 (2,3)
+ [1] 5
+
 
